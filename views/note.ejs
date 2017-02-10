@@ -15,7 +15,7 @@
 
     <button class="btn" id="edit_button">Edit</button>
     <form id='edit' class="hide" action=<%= url + '?_method=PUT' %> method="POST">
-      <input id="title" name="title" value=<%= note.name %> />
+      <input id="title" name="name" value=<%= note.name %> />
       <input id="description" name="description" value=<%= note.description %> />
       <button id="cancel" class="btn" type="button">Cancel</button>
       <button class="btn">Save</button>

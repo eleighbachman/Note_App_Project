@@ -27,8 +27,9 @@ router.get('/:id', function(req, res) {
 })
 
 router.put('/:id', function(req, res) {
+
     var body = {
-      title: req.body.title,
+      name: req.body.name,
       description: req.body.description,
       updatedAt: Date.now()
     }
