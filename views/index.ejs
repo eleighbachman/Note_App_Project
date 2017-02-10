@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+   <% include ./partials/head %>
   </head>
   <body>
-    <nav>
-      <div class="nav-wrapper blue darken-3">
-        <a href="/" class="brand-logo">Notes</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="/notes">Notes</a></li>
-        </ul>
-      </div>
-    </nav>
+    <% include ./partials/nav %>
     <div class="container">
       <h1><%= title %></h1>
       <p>Welcome to the <%= title %> page</p>
