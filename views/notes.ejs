@@ -2,26 +2,27 @@
 <head>
  <% include ./partials/head %>
 </head>
-
 <body>
   <% include ./partials/nav %>
-  <h1>Notes Galore!</h1>
-  <p>Welcome to the Notes page</p>
-  <form action='/notes' method='POST'>
-    <input placeholder="Note Name" name="name" />
-    <input placeholder="Description" name="description" />
-    <button type="button" class="btn">Cancel</button>
-    <button class="btn">Add Note</button>
-  </form>
-  <ul>
-    <% notes.forEach( function(note) { %>
-      <li>
-        <a href=<%= '/notes/' + note.id %> >
-          <%= note.name %>
-        </a>
-      </li>
-    <% }) %>
-  </ul>
+  <div class="container">
+    <h1>Notes Galore!</h1>
+    <p>Welcome to the Notes page</p>
+    <form action='/notes' method='POST'>
+      <input placeholder="Note Name" name="name" />
+      <input placeholder="Description" name="description" />
+      <button type="button" class="btn">Cancel</button>
+      <button class="btn">Add Note</button>
+    </form>
+    <ul>
+      <% notes.forEach( function(note) { %>
+        <li>
+          <a href=<%= '/notes/' + note.id %> >
+            <%= note.name %>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
 </body>
 
 </html>
