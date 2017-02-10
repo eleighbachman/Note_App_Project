@@ -7,5 +7,17 @@
   <h1><%= note.name %></h1>
   <p><%= note.description %></p>
   <% var url = '/notes/' + note.id %>
+  <form action=<%= url + '?_method=DELETE' %> method="POST">
+    <button class="btn">Delete</button>
+  </form>
+
+
+  <button class="btn" id="edit_button">Edit</button>
+  <form id='edit' class="hide" action=<%= url + '?_method=PUT' %> method="POST">
+    <input id="title" name="title" value=<%= note.name %> />
+    <input id="description" name="description" value=<%= note.description %> />
+    <button id="cancel" class="btn" type="button">Cancel</button>
+    <button class="btn">Save</button>
+  </form>
 </body>
 </html>
